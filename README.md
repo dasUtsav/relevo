@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
 
 # Executing the project
-npm execute (which runs both ng build and nodemon server.js)
+npm run execute (which runs both ng build and nodemon server.js)
 Starts the project at http://localhost:3000/
 
 # Running just angular
