@@ -1,0 +1,115 @@
+
+.content-wrapper {
+  padding: 20px;
+  padding-left: 110px; }
+
+@media only screen and (min-width: 768px) {
+.content-wrapper {
+  padding-left: 210px; } }
+
+h2{
+  padding: 10px;
+  padding-left: 40px;
+  font-size: 2em;
+  font-weight: 100;
+  text-transform: uppercase;
+  background-color: #f8c300;
+  color: #2c3136
+}
+
+.form-group{
+  float: left;
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form-group h3{
+  color: #c93b47;
+  font-weight: bolder;
+}
+
+.form-group label{
+  display: block;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="datetime"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="search"],
+.form-group input[type="time"],
+.form-group input[type="url"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group select
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+.form-group textarea{
+    resize:none;
+    overflow: hidden;
+}
+.form-group input[type="button"],
+.form-group input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.form-group input[type="button"]:hover,
+.form-group input[type="submit"]:hover {
+    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color:#34CACA;
+}
+
+button{
+  border: none;
+  padding: 10px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #c93b47;
+  color: white;
+  transition: 0.4s;
+  margin-top: 40px;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #962c35;
+}
+
+@media only screen and (min-width: 768px) {
+  .form-group{
+    display: block;
+  }
+  }

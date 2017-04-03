@@ -1,0 +1,76 @@
+.side-nav {
+  position: fixed;
+  float: left;
+  width: 100px;
+  height: 100vh;
+  background-color: #2c3136;
+  overflow-y: scroll;
+  color: white; }
+  .side-nav .logo {
+    height: 100px;
+    position: relative; }
+    .side-nav .logo img {
+      position: absolute;
+      max-width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-height: 100%; }
+  .side-nav ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px; }
+    .side-nav ul li {
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      border-bottom: 2px solid #e07a7a;
+      -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in; }
+      .side-nav ul li a {
+        display: block;
+        color: #cccccc;
+        text-decoration: none; }
+        .side-nav ul li a .icons {
+          display: block;
+          font-size: 2em; }
+        .side-nav ul li a .text {
+          display: inline;
+          font-size: 0.6em; }
+      .side-nav ul li:hover {
+        background-color: white; }
+        .side-nav ul li:hover a {
+          color: black; }
+      @media only screen and (min-width: 768px) {
+        .side-nav ul li {
+          text-align: left;
+          padding: 15px; }
+          .side-nav ul li .icons {
+            display: inline !important;
+            margin-right: 10px;
+            font-size: 1em !important; }
+          .side-nav ul li .text {
+            font-size: 1em !important; } }
+  .side-nav::-webkit-scrollbar {
+    width: 1px; }
+  @media only screen and (min-width: 768px) {
+    .side-nav {
+      width: 200px; }
+      .side-nav .logo {
+        height: 150px; } }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans"; }
+
+.main-content .content-wrapper {
+  padding: 20px;
+  padding-left: 110px; }
+
+@media only screen and (min-width: 768px) {
+  .main-content .content-wrapper {
+    padding-left: 210px; } }
