@@ -5,11 +5,14 @@ const router = express.Router();
 const {User} = require('./../db/models/user');
 const {authenticate} = require('./../middleware/authenticate');
 const _ = require('lodash');
+const {labapi} = require('./labapi');
 
 
 router.get('/', (req, res)=>{
   res.send('Default api path');
 });
+
+router.use('/lab',labapi);
 
 router.post('/adduser', (req, res)=>{
   var user = new User({
