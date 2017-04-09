@@ -1,0 +1,64 @@
+input{
+  border: none;
+  box-shadow: none;
+}
+
+*{
+  text-align: center;
+  color: #c93b47;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+header{
+  padding-top: 18vh;
+  padding-bottom:20px;
+}
+
+.bg header h1{
+  font-size: 3em;
+  font-weight:bolder;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+h2{
+  color: #c93b47;
+  font-size: 1em;
+  font-weight:lighter;
+  text-transform: uppercase;
+
+}
+
+form a{
+  font-size: 0.8em;
+  font-weight:lighter;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+form input{
+  padding: 5px 20px;
+  background-color: rgba(200, 200, 200, 0.2);
+  border-radius: 25px;
+  margin: 7px;
+}
+
+input:focus{
+  outline: none;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("/../../src/assets/images/download.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

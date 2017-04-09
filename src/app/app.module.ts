@@ -9,16 +9,21 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { AddPcComponent } from './add-pc/add-pc.component';
 import { DeletePcComponent } from './delete-pc/delete-pc.component';
 import { UpdatePcComponent } from './update-pc/update-pc.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
 
+{
+  path: 'login',
+  component: LoginComponent,
+},
+  { path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
   {
     path: 'add',
     component: AddPcComponent,
-  },
-  { path: '',
-    redirectTo: 'add',
-    pathMatch: 'full'
   },
   {
     path: 'delete',
@@ -37,7 +42,8 @@ const appRoutes: Routes = [
     SidenavComponent,
     AddPcComponent,
     DeletePcComponent,
-    UpdatePcComponent
+    UpdatePcComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
