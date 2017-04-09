@@ -9,6 +9,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { AddPcComponent } from './add-pc/add-pc.component';
 import { DeletePcComponent } from './delete-pc/delete-pc.component';
 import { UpdatePcComponent } from './update-pc/update-pc.component';
+import { RaiseIssueComponent } from './raise-issue/raise-issue.component';
 
 const appRoutes: Routes = [
 
@@ -27,6 +28,10 @@ const appRoutes: Routes = [
   {
     path: 'update',
     component: UpdatePcComponent,
+  },
+  {
+    path: 'issue',
+    component: RaiseIssueComponent,
   }
 
 ];
@@ -37,7 +42,8 @@ const appRoutes: Routes = [
     SidenavComponent,
     AddPcComponent,
     DeletePcComponent,
-    UpdatePcComponent
+    UpdatePcComponent,
+    RaiseIssueComponent
   ],
   imports: [
     BrowserModule,
