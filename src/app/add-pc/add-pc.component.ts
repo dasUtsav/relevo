@@ -15,10 +15,12 @@ import {
 
 })
 export class AddPcComponent implements OnInit {
-
-  constructor() { }
+  labNo:Number = JSON.parse(localStorage.getItem('currentUser')).labNo;
+  constructor() {
+  }
 
   ngOnInit() {
+
   }
 
 }

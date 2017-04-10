@@ -11,6 +11,8 @@ import { DeletePcComponent } from './delete-pc/delete-pc.component';
 import { UpdatePcComponent } from './update-pc/update-pc.component';
 import { RaiseIssueComponent } from './raise-issue/raise-issue.component';
 import { LoginComponent } from './login/login.component';
+import {AuthGuard} from './auth.guard';
+import {LoginGuard} from './login.guard';
 import {AuthService} from './auth.service';
 
 const appRoutes: Routes = [
@@ -18,6 +20,7 @@ const appRoutes: Routes = [
 {
   path: 'login',
   component: LoginComponent,
+  canActivate:[LoginGuard]
 },
   { path: '',
     redirectTo: 'login',
@@ -26,6 +29,7 @@ const appRoutes: Routes = [
   {
     path: 'add',
     component: AddPcComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'delete',
@@ -60,7 +64,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard,
+    LoginGuard
   ],
   bootstrap: [AppComponent]
 })

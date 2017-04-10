@@ -32,9 +32,17 @@ router.post('/login', (req, res) => {
   var body = _.pick(req.body, ['username', 'password']);
 
   User.findByCredentials(body.username, body.password).then((user)=>{
-    return user.generateAuthToken().then((token)=>{
-      res.header('auth', token).send(user);
-    });
+      var retObj = {};
+      user.generateAuthToken().then((token)=>{
+          retObj = _.pick(user, ['_id', 'username']);
+          retObj.token = token;
+          return user.getLabFromId();
+
+      }).then((lab)=>{
+        retObj.labNo = lab.labNo;
+        res.send(retObj);
+      });
+
   }).catch((err)=>{
     res.status(400).send();
   });

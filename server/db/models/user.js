@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 const _ = require('lodash');
+const {Lab} = require('./lab');
 
 
 var UserSchema = new mongoose.Schema({
@@ -43,13 +44,6 @@ UserSchema.pre('save', function(next){
   }
 });
 
-UserSchema.methods.toJSON = function(){
-  var user = this;
-  var userObject = user.toObject();
-
-  return _.pick(userObject, ['_id', 'username']);
-}
-
 UserSchema.methods.generateAuthToken = function(){
   var user = this;
   var token = jwt.sign({
@@ -61,6 +55,17 @@ UserSchema.methods.generateAuthToken = function(){
   });
   return user.save().then(() => {
     return token;
+  });
+}
+
+UserSchema.methods.getLabFromId = function(){
+  var user = this;
+  console.log("gg");
+  return Lab.findOne({incharge: user.username}).then((lab)=>{
+    console.log(lab);
+    if(!lab)
+      return Promise.reject();
+    return Promise.resolve(lab);
   });
 }
 

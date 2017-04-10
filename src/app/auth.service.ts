@@ -14,7 +14,6 @@ export class AuthService {
     this.token = currentUser && currentUser.token;
   }
   login(user:User):Observable<boolean>{
-    localStorage.removeItem('currentUser');
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http
@@ -23,7 +22,8 @@ export class AuthService {
                 let token = response.json() && response.json().token;
                 if(token){
                   this.token = token;
-                  localStorage.setItem('currentUser',JSON.stringify({name:user.username, token:token}));
+                  localStorage.setItem('currentUser',JSON.stringify({name:user.username, token:token,labNo:response.json().labNo}));
+                  console.log(localStorage.getItem('currentUser'));
                   return true;
                 }else{
                   return false;
@@ -37,10 +37,10 @@ export class AuthService {
   logout():Promise<boolean>{
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    headers.append('x-access-token', this.token);
+    headers.append('auth', this.token);
     console.log(headers);
     return this.http
-        .delete(this.baseUrl + '/token', {headers})
+        .delete(this.baseUrl + '/logout', {headers})
         .toPromise()
         .then(()=>{
           this.token = null;
