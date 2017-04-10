@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { DeletePcComponent } from './delete-pc/delete-pc.component';
 import { UpdatePcComponent } from './update-pc/update-pc.component';
 import { RaiseIssueComponent } from './raise-issue/raise-issue.component';
 import { LoginComponent } from './login/login.component';
+import {AuthService} from './auth.service';
 
 const appRoutes: Routes = [
 
@@ -47,17 +48,20 @@ const appRoutes: Routes = [
     SidenavComponent,
     AddPcComponent,
     DeletePcComponent,
-    RaiseIssueComponent
+    RaiseIssueComponent,
     UpdatePcComponent,
     LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

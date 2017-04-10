@@ -2,15 +2,27 @@
   <header>
     <img src="assets/images/vesit.png" alt="logo">
     <h1>Welcome to Relevo!</h1>
-    <h2>An hardware Inventory management System.</h2>
+    <h2>A hardware Inventory management System.</h2>
   </header>
 
-  <form>
-    <br><br><br>
-    <input type="email" name="emaidId" placeholder="gennady.tourist@gmail.com">
-    <br>
-    <input type="password" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-    <br><br>
-    <a href="#">Sign In</a>
+  <form [formGroup]="form" #f = "ngForm" (ngSubmit)="login()">
+      <small *ngIf="error">
+        Username or password is incorrect
+      </small>
+      <div>
+        <input type="text" placeholder="name" [(ngModel)]="user.username"formControlName="username">
+        <br>
+        <small *ngIf="formControl.username.touched && (!formControl.username.valid)">
+          Name is required
+        </small>
+      </div>
+      <div>
+        <input type="password" placeholder="password" [(ngModel)]="user.password"formControlName="password">
+        <br>
+        <small *ngIf="formControl.password.touched && (!formControl.password.valid)">
+          Password is required
+        </small>
+      </div>
+      <button type="submit" name="button" [disabled]="!form.valid">Submit</button>
   </form>
 </div>
