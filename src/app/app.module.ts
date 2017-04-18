@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import {AuthGuard} from './auth.guard';
 import {LoginGuard} from './login.guard';
 import {AuthService} from './auth.service';
+import {BasicService} from './basic.service';
 
 const appRoutes: Routes = [
 
@@ -65,6 +66,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     AuthService,
+    BasicService,
     AuthGuard,
     LoginGuard
   ],

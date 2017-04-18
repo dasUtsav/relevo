@@ -33,6 +33,7 @@ labapi.post('/addpc', (req, res)=>{
   var body = _.pick(req.body, ['pcNo', 'labNo', 'currentConfig']);
   var pc = new Pc(body);
   pc.history = [];
+  console.log(pc);
   pc.save().then(()=>{
     res.send(pc);
   }).catch((e)=>{

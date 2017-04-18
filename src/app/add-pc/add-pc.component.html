@@ -4,10 +4,10 @@
       <div class="form-group">
         <h3>1. PC Identification</h3>
         <label for="name">Lab number</label>
-        <input type="text" class="form-control" id="name" value="{{labNo}}"required>
+        <input type="text" class="form-control" name="labno"id="name" [(ngModel)]="pc.labNo" required>
 
         <label for="name">Number of PCs to be added</label>
-        <input type="number" class="form-control" id="name" required>
+        <input type="text" class="form-control"name="noofpcs" [(ngModel)]="pc.pcNo" required>
 
         <label for="name">Auto increment PC number?</label>
         <input type="checkbox" class="form-control" id="name" required>
@@ -15,27 +15,27 @@
       <div class="form-group">
         <h3>2. System Settings</h3>
         <label for="name">Processor</label>
-        <input type="text" class="form-control" id="name" required>
+        <input type="text" class="form-control" name="processor"[(ngModel)]="pc.currentConfig.processor"id="name" required>
 
         <label for="name">Memory</label>
-        <input type="text" class="form-control" id="name" required>
+        <input type="text" class="form-control" id="name"name="memory"[(ngModel)]="pc.currentConfig.memory" required>
 
         <label for="name">Graphics</label>
-        <input type="text" class="form-control" id="name" required>
+        <input type="text" class="form-control" id="name"name="graphics"[(ngModel)]="pc.currentConfig.graphics" required>
       </div>
       <div class="form-group">
         <h3>3. Peripeherals</h3>
         <label for="alterEgo">Keyboard</label>
-        <input type="text" class="form-control" id="alterEgo">
+        <input type="text" class="form-control" id="alterEgo"name="keyboard"[(ngModel)]="pc.currentConfig.peripherals.keyboard">
 
         <label for="alterEgo">Mouse</label>
-        <input type="text" class="form-control" id="alterEgo">
+        <input type="text" class="form-control" id="alterEgo"name="mouse"[(ngModel)]="pc.currentConfig.peripherals.mouse">
 
         <label for="alterEgo">Speaker</label>
-        <input type="text" class="form-control" id="alterEgo">
+        <input type="text" class="form-control" id="alterEgo"name="speaker"[(ngModel)]="pc.currentConfig.peripherals.speaker">
 
       </div>
 
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-success" (click)="submit()">Submit</button>
     </form>
 </div>
