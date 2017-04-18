@@ -17,7 +17,8 @@ router.use('/lab',labapi);
 router.post('/adduser', (req, res)=>{
   var user = new User({
     username: req.body.username,
-    password: req.body.password
+    password: req.body.password,
+    isAdmin: true
   });
   user.save().then((doc)=>{
     return user.generateAuthToken();
