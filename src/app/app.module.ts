@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import {AuthGuard} from './auth.guard';
 import {LoginGuard} from './login.guard';
 import {AuthService} from './auth.service';
+import { TransferComponent } from './transfer/transfer.component';
 
 const appRoutes: Routes = [
 
@@ -42,6 +43,10 @@ const appRoutes: Routes = [
   {
     path: 'issue',
     component: RaiseIssueComponent,
+  },
+  {
+    path: 'transfer',
+    component: TransferComponent,
   }
 
 ];
@@ -54,7 +59,8 @@ const appRoutes: Routes = [
     DeletePcComponent,
     RaiseIssueComponent,
     UpdatePcComponent,
-    LoginComponent
+    LoginComponent,
+    TransferComponent
   ],
   imports: [
     BrowserModule,
