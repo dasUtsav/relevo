@@ -27,15 +27,18 @@ export class AddPcComponent implements OnInit {
 
   }
   submit(){
-    console.log(this.pc);
-    
-    this.basicService.addPc(this.pc)
+      for(var i = 1; i <= this.noOfPc; i++){
+        this.pc.pcNo = this.labNo + "-" + i;
+        this.basicService.addPc(this.pc)
         .subscribe(result => {
             console.log("Successfully added pc");
         }, error=>{
           console.log("error adding pc");
           
         });
+      }
+      
+    
     
   }
 

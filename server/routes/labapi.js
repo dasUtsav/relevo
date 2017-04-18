@@ -6,6 +6,7 @@ const {ObjectID} = require('mongodb');
 const {Lab} = require('./../db/models/lab');
 const {Pc} = require('./../db/models/pc');
 const {adminAuthenticate} = require('./../middleware/adminAuthenticate');
+const {Counter} = require('./../db/models/counter');
 
 labapi.post('/addLab', adminAuthenticate, (req, res)=>{
   var body = _.pick(req.body, ['labNo', 'incharge']);
@@ -34,7 +35,12 @@ labapi.post('/addpc', (req, res)=>{
   var pc = new Pc(body);
   pc.history = [];
   console.log(pc);
-  pc.save().then(()=>{
+  Counter.findOneAndUpdate({$inc: {count: 1}}).then((counter)=>{
+    console.log(pc.pcNo);
+    pc.pcNo = body.labNo + "-" + counter.count;
+    console.log(pc);
+    return pc.save();
+  }).then(()=>{
     res.send(pc);
   }).catch((e)=>{
     res.status(400).send('Coundnt save the PC');

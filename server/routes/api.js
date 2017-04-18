@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 const {User} = require('./../db/models/user');
+const {Counter} = require('./../db/models/counter');
 const {authenticate} = require('./../middleware/authenticate');
 const _ = require('lodash');
 const {labapi} = require('./labapi');
@@ -28,6 +29,14 @@ router.post('/adduser', (req, res)=>{
     res.status(400).send(e);
   });;
 });
+
+router.get('/addCounter', (req, res)=>{
+  Counter.findOneAndUpdate({$inc: {count: 1}}).then((counter)=>{
+    res.status(200).send(counter);
+  }).catch((e)=>{
+    res.send(400).send('Error updating counter');
+  })
+})
 
 router.post('/login', (req, res) => {
   var body = _.pick(req.body, ['username', 'password']);
