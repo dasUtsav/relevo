@@ -78,7 +78,19 @@ labapi.get('/gethistory', (req, res)=>{
     }).catch((err)=>{
       res.status(404).send('could not find pc');
     });
-})
+});
+
+labapi.get('/getallpcs', (req, res)=>{
+    var labNo = req.query.labNo;
+    Pc.find({labNo}).then((pcs)=>{
+      if(pcs.length === 0){
+        res.status(404).send();
+      }
+      res.send(pcs);
+    }).catch((err)=>{
+      res.status(404).send('could not find pcs for this particular lab');
+    });
+});
 labapi.delete('/removefromhistory', (req, res)=>{
     var id = req.body._id;
     if(!ObjectID.isValid(id)){
