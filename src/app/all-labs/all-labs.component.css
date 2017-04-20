@@ -43,11 +43,12 @@ h3 a:hover{
 
 .panel{
   background-color: #efefef;
-  border-radius: 5px;
+  border-radius: 2px;
   margin: 15px;
-  width: 200px;
   transition: 0.4s;
+  width: 200px;
   box-shadow: 2px 2px 2px #bbb;
+  padding: 10px;
 }
 
 .panel:hover{
@@ -55,31 +56,15 @@ h3 a:hover{
   cursor: pointer;
 }
 
-.pcNo{
-  font-size: 1.5em;
-  padding: 5px;
-  font-weight: lighter;
-  border-bottom: 2px solid #ccc;
-  color: #ec4f5d;
-  display: block;
+.panel span{
   text-align: center;
-  width: 70%;
-  margin-top: 20px;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #777;
 }
 
-.pcNo i{
-  padding-right: 5px;
-}
-
-.modified{
-  color: #666;
-  display: block;
-  margin: 10px 10px;
-  font-size: 0.9em;
-}
-
-.issue{
-  color: #666;
-  display: block;
-  margin: 10px 10px;
+.panel i{
+  padding-left: 20px;
+  font-size: 1.5em;
+  color: #777;
 }

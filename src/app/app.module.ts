@@ -16,6 +16,7 @@ import {LoginGuard} from './login.guard';
 import {AuthService} from './auth.service';
 import {BasicService} from './basic.service';
 import { ViewPcComponent } from './view-pc/view-pc.component';
+import { AllLabsComponent } from './all-labs/all-labs.component';
 
 const appRoutes: Routes = [
 
@@ -48,6 +49,10 @@ const appRoutes: Routes = [
   {
     path: 'issue',
     component: RaiseIssueComponent,
+  },
+  {
+    path: 'all-labs',
+    component: AllLabsComponent,
   }
 
 ];
@@ -61,7 +66,8 @@ const appRoutes: Routes = [
     RaiseIssueComponent,
     UpdatePcComponent,
     LoginComponent,
-    ViewPcComponent
+    ViewPcComponent,
+    AllLabsComponent
   ],
   imports: [
     BrowserModule,
