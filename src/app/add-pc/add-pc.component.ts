@@ -20,11 +20,12 @@ export class AddPcComponent implements OnInit {
   pc:Pc = {labNo: this.labNo, pcNo: "", currentConfig: {peripherals:{}}};
   noOfPc:Number;
   constructor(private basicService:BasicService) {}
-
+  addStuff:string;
   ngOnInit() {
     console.log(this.pc);
-
   }
+
+
   submit(){
       for(var i = 1; i <= this.noOfPc; i++){
         this.pc.pcNo = this.labNo + "-" + i;
@@ -36,9 +37,22 @@ export class AddPcComponent implements OnInit {
 
         });
       }
+  }
 
+  addPeripheral(){
+    var temp = JSON.parse(JSON.stringify(this.pc));
+    temp.currentConfig.peripherals[this.addStuff] = "";
+    this.pc = temp;
 
-
+    
+    console.log(this.pc);
+  }
+  deleteComponent(event){
+    var prop = event.target.innerText;
+    var temp = JSON.parse(JSON.stringify(this.pc));
+    delete temp.currentConfig.peripherals[this.addStuff];
+    this.pc = temp;
+    
   }
 
 }

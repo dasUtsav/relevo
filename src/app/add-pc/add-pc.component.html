@@ -25,16 +25,15 @@
       <div class="form-group2">
         <span>STEP 3 OF 3 :</span>
         <h3>Peripeherals</h3>
-        <input type="search" name="" value="Keyboard">
-        <input type="submit" name="" value=" + Add">
-
-        <label for="alterEgo">Mouse</label>
-        <input type="text" class="form-control" id="alterEgo"name="mouse"[(ngModel)]="pc.currentConfig.peripherals.mouse">
-
-        <label for="alterEgo">Speaker</label>
-        <input type="text" class="form-control" id="alterEgo"name="speaker"[(ngModel)]="pc.currentConfig.peripherals.speaker">
+        <input type="search" name="addStuff" [(ngModel)]="addStuff" value="Keyboard">
+        <input type="submit" name="" value=" + Add" (click)="addPeripheral()">
+        <div *ngFor="let peripheral of pc['currentConfig']['peripherals'] | keys">
+          <label for="alterEgo" (click)="deleteComponent($event)">{{peripheral['key']}}</label>
+          <input type="text" class="form-control" id="alterEgo" name="{{peripheral['key']}}" [(ngModel)]="pc.currentConfig.peripherals[peripheral['key']]">
+        </div>
 
         <button type="submit" class="btn btn-success" (click)="submit()">Submit</button>
       </div>
+      
     </form>
 </div>
