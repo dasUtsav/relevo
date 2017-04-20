@@ -1,0 +1,142 @@
+.content-wrapper {
+  padding-left: 100px; }
+
+@media only screen and (min-width: 768px) {
+.content-wrapper {
+  padding-left: 210px;
+  } }
+
+h2{
+  padding: 20px;
+  padding-left: 40px;
+  margin: 0px;
+  font-size: 2em;
+  font-weight: 100;
+  background-color: #ec4f5d;
+  color: #f7f7f7;
+}
+
+h3{
+  padding-top: 20px;
+  padding-left: 7%;
+  margin: 0px;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+h3 a{
+  text-decoration: none;
+  color: #555;
+}
+
+h3 a:hover{
+  text-decoration: underline;
+  color: #777;
+}
+
+.display-wrap{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.panel{
+  background-color: #efefef;
+  border-radius: 5px;
+  margin: 15px;
+  width: 200px;
+  transition: 0.4s;
+}
+
+.panel:hover{
+  box-shadow: 5px 5px 2px #bbb;
+  cursor: pointer;
+}
+
+.pcNo{
+  font-size: 1.5em;
+  padding: 5px;
+  font-weight: lighter;
+  border-bottom: 2px solid #ccc;
+  color: #ec4f5d;
+  display: block;
+  text-align: center;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.modified{
+  color: #666;
+  display: block;
+  margin: 10px 10px;
+  font-size: 0.9em;
+}
+
+.issue{
+  color: #666;
+  display: block;
+  margin: 10px 10px;
+}
+
+.details{
+    width: 800px;
+    background-color: #efefef;
+}
+
+.detail-group
+{
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 700px;
+}
+
+#prevConfig{
+    background-color: #efefef;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    padding: 100px;
+    font-size: 1.3em;
+}
+
+button{
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 5px;
+  color: white;
+  transition: 0.4s;
+}
+
+#btn1
+{
+    background-color:#1e90ff;
+}
+
+#btn2
+{
+    background-color: #c93b47;
+}
+
+
+#btn1:hover{
+  cursor: pointer;
+  background-color: #0b60ff;
+}
+
+#btn2:hover{
+  cursor: pointer;
+  background-color: #962c35;
+}
+
+
+
+

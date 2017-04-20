@@ -16,6 +16,7 @@ import {LoginGuard} from './login.guard';
 import {AuthService} from './auth.service';
 import {BasicService} from './basic.service';
 import { ViewPcComponent } from './view-pc/view-pc.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 const appRoutes: Routes = [
 
@@ -48,6 +49,10 @@ const appRoutes: Routes = [
   {
     path: 'issue',
     component: RaiseIssueComponent,
+  },
+  {
+    path: 'view-pc',
+    component: ViewDetailsComponent,
   }
 
 ];
@@ -61,7 +66,8 @@ const appRoutes: Routes = [
     RaiseIssueComponent,
     UpdatePcComponent,
     LoginComponent,
-    ViewPcComponent
+    ViewPcComponent,
+    ViewDetailsComponent
   ],
   imports: [
     BrowserModule,
