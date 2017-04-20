@@ -6,6 +6,10 @@
   padding-left: 200px;
   } }
 
+a{
+  text-decoration: none;
+}
+
 h2{
   padding: 20px;
   padding-left: 40px;

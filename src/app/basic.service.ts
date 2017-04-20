@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import {Pc} from './Pc';
+import {Lab} from './Lab';
 
 @Injectable()
 export class BasicService {
@@ -29,12 +30,12 @@ export class BasicService {
 
     }
 
-    viewPc(pc:Pc):Observable<any>{
+    getLabs():Observable<Lab[]>{
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
-        headers.append('auth', this.token);
+        
         return this.http
-                   .post(this.baseUrl + "/lab/getlabs", JSON.stringify(pc), {headers})
+                   .get(this.baseUrl + "/lab/getlabs", {headers})
                    .map((response: Response)=>{
                         console.log(response.json());
                         return response.json();

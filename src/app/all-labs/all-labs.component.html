@@ -7,82 +7,19 @@
 
   <div class="display-wrap">
 
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
+    <div  *ngFor="let lab of labs"> 
+      <a [routerLink]="['/lab',lab.labNo]">
+        <div class="panel">
+        <i class="fa fa-television" aria-hidden="true"></i>
+        <span>Lab {{lab.labNo}}</span>
+      </div>
+      </a>
+      
     </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
-    <div class="panel">
-      <i class="fa fa-television" aria-hidden="true"></i>
-      <span>Lab 509</span>
-    </div>
+    
+   
+    
+    
 
 
 

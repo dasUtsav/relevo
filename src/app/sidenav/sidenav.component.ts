@@ -8,8 +8,11 @@ import {Router} from '@angular/router';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
+  labNo:Number;
+  constructor(private authService: AuthService, private router:Router) { 
+    this.labNo = JSON.parse(localStorage.getItem('currentUser')).labNo;
 
-  constructor(private authService: AuthService, private router:Router) { }
+  }
 
   ngOnInit() {
   }

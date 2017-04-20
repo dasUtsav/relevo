@@ -40,7 +40,7 @@ const appRoutes: Routes = [
     component: DeletePcComponent,
   },
   {
-    path: 'view',
+    path: 'lab/:labNo',
     component: ViewPcComponent,
   },
   {
