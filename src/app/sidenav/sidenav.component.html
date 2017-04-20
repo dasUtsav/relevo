@@ -5,11 +5,29 @@
 
         <ul>
           <li>
+            <a>
+              <span class="icons">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </span>
+            <span class="text">Kaushal</span>
+          </a>
+        </li>
+          <li>
+            <a routerLink="/login" routerLinkActive="active" (click)="logout()">
+              <span class="icons">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </span>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+
+          <br>
+          <li>
             <a routerLink="/add" routerLinkActive="active">
               <span class="icons">
                 <i class="fa fa-cog" aria-hidden="true"></i>
               </span>
-              <span class="text">Add PCs</span>
+              <span class="text">Add New PCs</span>
             </a>
           </li>
           <li><a routerLink="/delete" routerLinkActive="active">
@@ -28,11 +46,11 @@
             </a>
           </li>
           <li>
-            <a routerLink="/crisis-center" routerLinkActive="active">
+            <a routerLink="/view" routerLinkActive="active">
               <span class="icons">
                 <i class="fa fa-desktop" aria-hidden="true"></i>
               </span>
-              <span class="text">View PCs</span>
+              <span class="text">Manage PCs</span>
             </a>
           </li>
           <li>
@@ -67,13 +85,6 @@
             <span class="text">Generate a report</span>
           </a>
         </li>
-          <li>
-            <a routerLink="/login" routerLinkActive="active" (click)="logout()">
-              <span class="icons">
-              <i class="fa fa-sign-out" aria-hidden="true"></i>
-            </span>
-            <span class="text">Logout</span>
-          </a>
-        </li>
+
         </ul>
       </nav>

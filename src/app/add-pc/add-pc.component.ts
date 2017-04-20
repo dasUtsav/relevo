@@ -14,7 +14,6 @@ import {BasicService} from '../basic.service';
   selector: 'app-add-pc',
   templateUrl: './add-pc.component.html',
   styleUrls: ['./add-pc.component.css']
-
 })
 export class AddPcComponent implements OnInit {
   labNo:Number = JSON.parse(localStorage.getItem('currentUser')).labNo;
@@ -34,12 +33,12 @@ export class AddPcComponent implements OnInit {
             console.log("Successfully added pc");
         }, error=>{
           console.log("error adding pc");
-          
+
         });
       }
-      
-    
-    
+
+
+
   }
 
 }
