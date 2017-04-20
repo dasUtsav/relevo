@@ -43,14 +43,14 @@ export class AddPcComponent implements OnInit {
     var temp = JSON.parse(JSON.stringify(this.pc));
     temp.currentConfig.peripherals[this.addStuff] = "";
     this.pc = temp;
-
-    
     console.log(this.pc);
   }
+
+
   deleteComponent(event){
     var prop = event.target.innerText;
     var temp = JSON.parse(JSON.stringify(this.pc));
-    delete temp.currentConfig.peripherals[this.addStuff];
+    delete temp.currentConfig.peripherals[prop];
     this.pc = temp;
     
   }
