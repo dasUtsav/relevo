@@ -15,6 +15,7 @@ import {AuthGuard} from './auth.guard';
 import {LoginGuard} from './login.guard';
 import {AuthService} from './auth.service';
 import {BasicService} from './basic.service';
+import { ViewPcComponent } from './view-pc/view-pc.component';
 
 const appRoutes: Routes = [
 
@@ -37,6 +38,10 @@ const appRoutes: Routes = [
     component: DeletePcComponent,
   },
   {
+    path: 'view',
+    component: ViewPcComponent,
+  },
+  {
     path: 'update',
     component: UpdatePcComponent,
   },
@@ -55,7 +60,8 @@ const appRoutes: Routes = [
     DeletePcComponent,
     RaiseIssueComponent,
     UpdatePcComponent,
-    LoginComponent
+    LoginComponent,
+    ViewPcComponent
   ],
   imports: [
     BrowserModule,

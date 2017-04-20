@@ -25,9 +25,24 @@ export class BasicService {
                         console.log(response.json());
                         return true;
                    }).catch(this.handleError);
-        
+
 
     }
+
+    viewPc(pc:Pc):Observable<any>{
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('auth', this.token);
+        return this.http
+                   .post(this.baseUrl + "/lab/getlabs", JSON.stringify(pc), {headers})
+                   .map((response: Response)=>{
+                        console.log(response.json());
+                        return response.json();
+                   }).catch(this.handleError);
+
+
+    }
+
 
     public handleError(error: Response) {
         console.error(error);
