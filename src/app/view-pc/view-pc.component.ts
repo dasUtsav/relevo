@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {Pc} from "../Pc";
 import {
   Input,
@@ -17,9 +18,16 @@ import {BasicService} from '../basic.service';
 })
 export class ViewPcComponent implements OnInit {
 
-  constructor() { }
+  labNo:number;
+  pcs:Pc[];
+  constructor(private route: ActivatedRoute, private basicservice:BasicService) { }
 
   ngOnInit() {
+    this.labNo = this.route.params['value']['labNo'];
+    this.basicservice.getPcs(this.labNo)
+                     .subscribe((result)=>{
+                        this.pcs = result;
+                     });
   }
 
 }

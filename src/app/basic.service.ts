@@ -43,6 +43,25 @@ export class BasicService {
 
 
     }
+    getPcs(labNo:number):Observable<Pc[]>{
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        
+        return this.http
+                   .get(this.baseUrl + "/lab/getallpcs?labNo="+labNo, {headers})
+                   .map((response: Response)=>{
+                        response = response.json().map((resp)=>{
+                            return{
+                                pcNo: resp.pcNo
+                            }
+                        });
+                        console.log(response);
+                        
+                        return response;
+                   }).catch(this.handleError);
+
+
+    }
 
 
     public handleError(error: Response) {

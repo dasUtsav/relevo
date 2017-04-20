@@ -3,159 +3,22 @@
 
   <h3>
     <a routerLink="/all-labs" routerLinkActive="active">All Labs</a> /
-    <a routerLink="/view" routerLinkActive="active">Lab 509</a>
+    <a routerLink="/view" routerLinkActive="active">Lab {{labNo}}</a>
   </h3>
 
   <div class="display-wrap">
 
-    <div class="panel">
+    <div class="panel" *ngFor="let pc of pcs">
+
       <span class="pcNo">
         <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
+        {{pc.pcNo}}
       </span>
       <span class="modified">Last modified 17 Jan 2017</span>
       <span class="issue">No Issues</span>
     </div>
 
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
-
-    <div class="panel">
-
-      <span class="pcNo">
-        <i class="fa fa-television" aria-hidden="true"></i>
-        509-19
-      </span>
-      <span class="modified">Last modified 17 Jan 2017</span>
-      <span class="issue">No Issues</span>
-    </div>
+    
 
   </div>
 </div>
