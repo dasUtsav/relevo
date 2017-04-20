@@ -17,6 +17,7 @@ import {AuthService} from './auth.service';
 import {BasicService} from './basic.service';
 import { ViewPcComponent } from './view-pc/view-pc.component';
 import { AllLabsComponent } from './all-labs/all-labs.component';
+import { Keys } from './keys.pipe';
 
 const appRoutes: Routes = [
 
@@ -67,7 +68,8 @@ const appRoutes: Routes = [
     UpdatePcComponent,
     LoginComponent,
     ViewPcComponent,
-    AllLabsComponent
+    AllLabsComponent,
+    Keys
   ],
   imports: [
     BrowserModule,

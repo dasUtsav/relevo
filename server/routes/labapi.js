@@ -31,14 +31,18 @@ labapi.delete('/removeLab', adminAuthenticate, (req, res)=>{
 });
 
 labapi.post('/addpc', (req, res)=>{
-  var body = _.pick(req.body, ['pcNo', 'labNo', 'currentConfig']);
+  var body = _.pick(req.body, ['labNo', 'currentConfig']);
   var pc = new Pc(body);
   pc.history = [];
+  pc.history.push({
+    date: new Date(),
+    config: pc.currentConfig
+  });
   console.log(pc);
   Counter.findOneAndUpdate({$inc: {count: 1}}).then((counter)=>{
-    console.log(pc.pcNo);
+    // console.log(pc.pcNo);
     pc.pcNo = body.labNo + "-" + counter.count;
-    console.log(pc);
+    // console.log(pc);
     return pc.save();
   }).then(()=>{
     res.send(pc);
@@ -58,7 +62,7 @@ labapi.post('/updateconfig', (req, res)=>{
     console.log(pc);
     pc.history.push({
       date: new Date(),
-      config: currentConfig
+      config: updateConfig.config
     });
     return pc.save();
   }).then(()=>{
@@ -91,6 +95,18 @@ labapi.get('/getallpcs', (req, res)=>{
       res.status(404).send('could not find pcs for this particular lab');
     });
 });
+
+labapi.get('/getlabs', (req, res)=>{
+    Lab.find().then((labs)=>{
+      if(labs.length === 0){
+        res.status(404).send();
+      }
+      res.send(labs);
+    }).catch((err)=>{
+      res.status(404).send('could not find pcs for this particular lab');
+    });
+});
+
 labapi.delete('/removefromhistory', (req, res)=>{
     var id = req.body._id;
     if(!ObjectID.isValid(id)){
