@@ -39,7 +39,7 @@ labapi.post('/addpc', (req, res)=>{
     config: pc.currentConfig
   });
   console.log(pc);
-  Counter.findOneAndUpdate({$inc: {count: 1}}).then((counter)=>{
+  Counter.findOneAndUpdate({labNo: body.labNo},{$inc: {count: 1}}).then((counter)=>{
     // console.log(pc.pcNo);
     pc.pcNo = body.labNo + "-" + counter.count;
     // console.log(pc);

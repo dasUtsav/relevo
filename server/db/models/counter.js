@@ -5,6 +5,9 @@ var CounterSchema = new mongoose.Schema({
     count:{
         type: Number,
         default:0
+    },
+    labNo:{
+        type: Number
     }
 });
 

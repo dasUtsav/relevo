@@ -30,12 +30,16 @@ router.post('/adduser', (req, res)=>{
   });;
 });
 
-router.get('/addCounter', (req, res)=>{
-  Counter.findOneAndUpdate({$inc: {count: 1}}).then((counter)=>{
-    res.status(200).send(counter);
+router.post('/addCounter', (req, res)=>{
+  var counter = new Counter({
+    labNo: req.body.labNo
+  });
+
+  counter.save().then(()=>{
+  res.status(200).send("successfully added counter"); 
   }).catch((e)=>{
-    res.send(400).send('Error updating counter');
-  })
+    res.status(400).send("Couldnt update counter"); 
+  });
 })
 
 router.post('/login', (req, res) => {
