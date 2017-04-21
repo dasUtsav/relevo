@@ -1,6 +1,6 @@
 # Relevo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
+Relevo provides a remotely accessible web application to keep track of and manage the inventory records of an organisation, all on a single platform. Verified users log in to manage, add and transfer inventory while also giving feedback on specific inventory items within labs or rooms. A secure, remotely accessible database records all the changes occurring in the inventory list hosted on mlab.Inc, a MongoDB hosting site. 
 
 # Executing the project
 npm run execute (which runs both ng build and nodemon server.js)
