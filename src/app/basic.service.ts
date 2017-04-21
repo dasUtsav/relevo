@@ -65,6 +65,17 @@ export class BasicService {
 
     }
 
+    addIssue(issue:Object):Observable<boolean>{
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('auth', this.token);
+        return this.http    
+                   .post(this.baseUrl + "/lab/addIssue",JSON.stringify(issue),{headers} )
+                   .map((response: Response)=>{
+                       return true;
+                   }).catch(this.handleError);
+    }
+
 
     public handleError(error: Response) {
         console.error(error);
