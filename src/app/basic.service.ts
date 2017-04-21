@@ -56,6 +56,7 @@ export class BasicService {
                             return{
                                 pcNo: resp.pcNo,
                                 date,
+                                history: resp.history,
                                 issues: resp.issues
                             }
                         });
