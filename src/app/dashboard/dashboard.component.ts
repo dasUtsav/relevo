@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {BasicService} from '../basic.service';
+import {Pc} from "../Pc";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private basicService: BasicService) { }
+  pcs:Pc[];
+  labNo:number = JSON.parse(localStorage.getItem('currentUser')).labNo
+  issuedPc:Object[];
   ngOnInit() {
-
+    this.basicService.getPcs(this.labNo)
+                     .subscribe((result)=>{
+                        this.pcs = result;
+                        this.issuedPc = this.pcs.filter((pc)=>{
+                          return pc['issues'].length !== 0
+                        })
+                        console.log(this.issuedPc);
+                     });
   }
 
   calendarOptions:Object = {
