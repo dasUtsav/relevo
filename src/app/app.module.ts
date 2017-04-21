@@ -18,6 +18,7 @@ import {BasicService} from './basic.service';
 import { ViewPcComponent } from './view-pc/view-pc.component';
 import { AllLabsComponent } from './all-labs/all-labs.component';
 import { Keys } from './keys.pipe';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
 
@@ -54,6 +55,10 @@ const appRoutes: Routes = [
   {
     path: 'all-labs',
     component: AllLabsComponent,
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
   }
 
 ];
@@ -69,7 +74,8 @@ const appRoutes: Routes = [
     LoginComponent,
     ViewPcComponent,
     AllLabsComponent,
-    Keys
+    Keys,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
