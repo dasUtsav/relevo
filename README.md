@@ -1,14 +1,39 @@
 # Relevo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
+Relevo provides a remotely accessible web application to keep track of and manage the inventory records of an organisation, all on a single platform. Verified users log in to manage, add and transfer inventory while also giving feedback on specific inventory items within labs or rooms. A secure, remotely accessible database records all the changes occurring in the inventory list hosted on mlab.Inc, a MongoDB hosting site. 
 
-# Executing the project
-npm run execute (which runs both ng build and nodemon server.js)
-Starts the project at http://localhost:3000/
+# Installation
 
-# Running just angular
-ng serve
-Which serves at http://localhost:4200/
+Our project uses [npm](https://www.npmjs.com/) to handle all the modules and dependencies and [angular](https://angular.io/) framework for the front end. 
 
-#API
-http://localhost:3000/api
+Steps to install and update node.js and npm is provided [here](https://docs.npmjs.com/getting-started/installing-node).
+
+After installing node and npm we can install **angular/cli** easily with the help of **npm**.
+Run the following command in the terminal.
+
+`npm install -g @angular/cli`
+
+This installs angular/cli globally.
+
+## Installing the dependencies
+
+Simply run the following command in the terminal.
+
+`npm install`
+
+**NOTE**: Make sure to be in the project directory before running this command
+
+## Executing the project
+
+Type the following commands in the terminal.
+
+`npm run execute`
+
+`ng serve`
+
+This starts the node server and now the application can be accessed at http://localhost:4200/
+
+
+#Issues
+
+If you have any issues with the installation please contact us.
