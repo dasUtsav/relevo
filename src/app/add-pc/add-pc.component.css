@@ -195,8 +195,17 @@ span{
   display: block;
 }
 
+.addField{
+  margin-bottom: 20px;
+}
+.addField input[type="search"]{
+  height: 35px;
+  width: 400px;
+}
+
   @media only screen and (min-width: 768px) {
     .form-group{
       display: block;
     }
     }
+
