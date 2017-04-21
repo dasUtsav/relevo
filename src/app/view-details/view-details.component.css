@@ -40,20 +40,6 @@ h3 a:hover{
   display: flex;
   flex-wrap: wrap;
 }
-
-.panel{
-  background-color: #efefef;
-  border-radius: 5px;
-  margin: 15px;
-  width: 200px;
-  transition: 0.4s;
-}
-
-.panel:hover{
-  box-shadow: 5px 5px 2px #bbb;
-  cursor: pointer;
-}
-
 .pcNo{
   font-size: 1.5em;
   padding: 5px;
@@ -66,22 +52,14 @@ h3 a:hover{
   margin-top: 20px;
 }
 
-.modified{
-  color: #666;
-  display: block;
-  margin: 10px 10px;
-  font-size: 0.9em;
-}
-
-.issue{
-  color: #666;
-  display: block;
-  margin: 10px 10px;
-}
 
 .details{
-    width: 800px;
+
+    width: 55%;
+    padding: 20px;
+    margin: 20px;
     background-color: #efefef;
+
 }
 
 .detail-group
@@ -92,6 +70,16 @@ h3 a:hover{
   border: 1px solid #ddd;
   width: 80%;
   max-width: 700px;
+}
+
+.detail-group h3 
+{
+  margin-bottom: 10px;
+}
+
+.detail-group p 
+{
+  padding-left: 10%;
 }
 
 #prevConfig{
@@ -105,16 +93,26 @@ h3 a:hover{
 
 button{
   border: none;
-  padding: 10px;
-  margin: 10px;
-  font-size: 1.2em;
+  padding: 5px;
+  margin: 5px;
+  font-size: 0.9em;
   text-transform: uppercase;
-  width: 100%;
+  width: 80px;
+  background-color:#1e90ff;
   max-width: 700px;
   border-radius: 5px;
   color: white;
   transition: 0.4s;
 }
+
+.button-group
+{
+   margin-top: -20px;
+   padding: 30px;
+   width: 80%;
+   max-width: 700px;
+}
+
 
 #btn1
 {
@@ -126,6 +124,10 @@ button{
     background-color: #c93b47;
 }
 
+button:hover{
+  cursor: pointer;
+  background-color: #0b60ff;
+}
 
 #btn1:hover{
   cursor: pointer;
@@ -138,5 +140,151 @@ button{
 }
 
 
+.form-group{
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 700px;
+}
 
+.form-group h3{
+  color: #c93b47;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.form-group label{
+  display: block;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="datetime"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="time"],
+.form-group input[type="url"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group select
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+.form-group textarea{
+    resize:none;
+    overflow: hidden;
+}
+.form-group input[type="button"],
+.form-group input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.form-group input[type="button"]:hover,
+.form-group input[type="submit"]:hover {
+    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color:#34CACA;
+}
+
+.form-group2{
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 700px;
+}
+
+.form-group2 h3{
+  color: #c93b47;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.form-group2 label{
+  display: block;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+.form-group2 input[type="text"],
+.form-group2 input[type="date"],
+.form-group2 input[type="datetime"],
+.form-group2 input[type="email"],
+.form-group2 input[type="number"],
+.form-group2 input[type="time"],
+.form-group2 input[type="url"],
+.form-group2 input[type="password"],
+.form-group2 textarea,
+.form-group2 select
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+.form-group2 textarea{
+    resize:none;
+    overflow: hidden;
+}
+.form-group2 input[type="button"],
+.form-group2 input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.form-group2 input[type="button"]:hover,
+.form-group2 input[type="submit"]:hover {
+    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color:#34CACA;
+}
+
+.form-group2 input[type="search"]{
+  outline: none;
+}
 
