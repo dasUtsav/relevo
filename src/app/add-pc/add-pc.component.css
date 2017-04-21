@@ -211,6 +211,9 @@ button:hover{
   cursor: pointer;
   background-color: #962c35;
 }
+button[ng-reflect-disabled="true"]{
+  cursor: no-drop;
+}
 
 span{
   font-weight: lighter;

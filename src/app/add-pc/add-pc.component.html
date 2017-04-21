@@ -13,39 +13,45 @@
       </div>
     </div>
 
-    <form>
-      <div class="form-group">
+    <form  #f = "ngForm" (ngSubmit)="submit()">
+      <div [formGroup]="form"> 
+        <div class="form-group">
         <span>STEP 1 OF 3 :</span>
         <h3>PC Identification</h3>
         <label for="name">Number of PCs to be added</label>
-        <input type="number" class="form-control"name="noofpcs" [(ngModel)]="noOfPc" required>
+        <input type="number" class="form-control"name="noofpcs" [(ngModel)]="noOfPc" formControlName="noOfPcs">
       </div>
       <div class="form-group">
         <span>STEP 2 OF 3 :</span>
         <h3>System Settings</h3>
         <label for="name">Processor</label>
-        <input type="text" class="form-control" name="processor"[(ngModel)]="pc.currentConfig.processor"id="name" required>
+        <input type="text" class="form-control" name="processor"[(ngModel)]="pc.currentConfig.processor"id="name" formControlName="processor">
 
         <label for="name">Installed Memory (RAM)</label>
-        <input type="text" class="form-control" id="name"name="memory"[(ngModel)]="pc.currentConfig.memory" required>
+        <input type="text" class="form-control" id="name"name="memory"[(ngModel)]="pc.currentConfig.memory" formControlName="memory">
 
         <label for="name">Graphics</label>
-        <input type="text" class="form-control" id="name"name="graphics"[(ngModel)]="pc.currentConfig.graphics" required>
+        <input type="text" class="form-control" id="name"name="graphics"[(ngModel)]="pc.currentConfig.graphics" formControlName="graphics">
+      </div>  
       </div>
+      
       <div class="form-group2">
         <span>STEP 3 OF 3 :</span>
         <h3>Peripeherals</h3>
         <div class="addField">
           <input type="search" name="addStuff" [(ngModel)]="addStuff" value="Keyboard">
-          <input type="submit" name="" value="Add" (click)="addPeripheral()">
+          <input type="button" name="" value="Add" (click)="addPeripheral()">
         </div>
 
-        <div *ngFor="let peripheral of pc['currentConfig']['peripherals'] | keys">
+        <div [formGroup]="form">
+          <div *ngFor="let peripheral of pc['currentConfig']['peripherals'] | keys">
           <label for="alterEgo" (click)="deleteComponent($event)">{{peripheral['key']}}</label>
-          <input type="text" class="form-control" id="alterEgo" name="{{peripheral['key']}}" [(ngModel)]="pc.currentConfig.peripherals[peripheral['key']]">
+          <input type="text" class="form-control" id="alterEgo" name="{{peripheral['key']}}" [(ngModel)]="pc.currentConfig.peripherals[peripheral['key']]" formControlName="{{peripheral['key']}}">
         </div>
+        </div>
+        
 
-        <button type="submit" class="btn btn-success" (click)="submit()">Submit</button>
+        <button type="submit" class="btn btn-success" [disabled]="!form.valid">Submit</button>
       </div>
 
     </form>
