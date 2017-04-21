@@ -4,15 +4,36 @@ Relevo provides a remotely accessible web application to keep track of and manag
 
 # Installation
 
-Our project uses [npm](https://www.npmjs.com/) to handle all the modules dependencies, So it is must to have it to install this project.
+Our project uses [npm](https://www.npmjs.com/) to handle all the modules and dependencies and [angular](https://angular.io/) framework for the front end. 
+
+Steps to install and update node.js and npm is provided [here](https://docs.npmjs.com/getting-started/installing-node).
+
+After installing node and npm we can install angular/cli easily with the help of npm.
+Run the following command in the terminal.
+
+`npm install -g @angular/cli`
+
+This install angular/cli globally.
+
+## Installing the dependencies
+
+Simply run the following command in the terminal.
+
+`npm install`
+
+**NOTE**: Make sure to be in the project directory before running this command
+
+## Executing the project
+
+Type the following commands in the terminal.
+
+`npm run execute`
+
+`ng serve`
+
+This starts the node server and now the application can be accessed at http://localhost:4200/
 
 
+#Issues
 
-
-
-# Running just angular
-ng serve
-Which serves at http://localhost:4200/
-
-#API
-http://localhost:3000/api
+If you have any issues with the installation please contact us.
