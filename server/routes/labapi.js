@@ -34,6 +34,7 @@ labapi.post('/addpc', (req, res)=>{
   var body = _.pick(req.body, ['labNo', 'currentConfig']);
   var pc = new Pc(body);
   pc.history = [];
+  console.log("Current config is ", pc);
   pc.history.push({
     date: new Date(),
     config: pc.currentConfig

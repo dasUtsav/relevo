@@ -46,17 +46,18 @@ export class BasicService {
     getPcs(labNo:number):Observable<Pc[]>{
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
-        
+        var date;
         return this.http
                    .get(this.baseUrl + "/lab/getallpcs?labNo="+labNo, {headers})
                    .map((response: Response)=>{
                         response = response.json().map((resp)=>{
+                            date = new Date(resp.history[resp.history.length - 1].date).toDateString();
                             return{
-                                pcNo: resp.pcNo
+                                pcNo: resp.pcNo,
+                                date
                             }
                         });
-                        console.log(response);
-                        
+                        console.log(response); 
                         return response;
                    }).catch(this.handleError);
 
