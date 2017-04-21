@@ -69,3 +69,14 @@ h3{
   display: block;
   color: #555;
 }
+
+.description .hidden{
+  display: none;
+}
+
+.description:hover .hidden{
+  display: inline;
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+}
