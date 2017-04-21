@@ -26,10 +26,9 @@ h2{
 }
 
 .display-wrap{
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+
 }
 
 h3{
@@ -79,4 +78,86 @@ h3{
   float: right;
   font-size: 1.5em;
   cursor: pointer;
+}
+
+.left{
+  width: 50%;
+  float: left;
+}
+.calender{
+  width: 400px;
+  height: 400px;
+  margin: 30px;
+  margin-top: 20px;
+  margin-right: 100px;
+  float: right;
+}
+
+.rightpanel{
+  float: right;
+  padding: 20px;
+}
+
+.leftpanel{
+  float: left;
+  background-color: #eee;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.rightpanel ul{
+  list-style-type: none;
+}
+
+.panel2{
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  margin: 15px;
+  transition: 0.4s;
+  box-shadow: 2px 2px 2px #bbb;
+}
+
+.panel2:hover{
+  box-shadow: 5px 5px 2px #bbb;
+}
+
+.pcName{
+  font-weight: bold;
+  color: #555;
+}
+
+.issueDesc{
+  color: #666;
+}
+
+li{
+  padding: 5px;
+}
+
+li a{
+  text-decoration: none;
+}
+
+li a:hover{
+  text-decoration: underline;
+}
+
+.rightpanel h4{
+  color: #888;
+  font-weight: 100;
+  padding: 5px;
+}
+
+.calender h4{
+  font-size: 1.7em;
+  font-weight: 100;
+  color: #555;
+  padding-bottom: 10px;
+}
+
+.calender h5{
+  font-size: 0.9em;
+  font-weight: 100;
+  color: #777;
+  padding-bottom: 10px;
 }
