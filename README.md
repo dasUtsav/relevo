@@ -29,9 +29,7 @@ Type the following commands in the terminal.
 
 `npm run execute`
 
-`ng serve`
-
-This starts the node server and now the application can be accessed at http://localhost:4200/
+This starts the node server and now the application can be accessed at http://localhost:3000/
 
 
 #Issues
