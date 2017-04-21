@@ -2,7 +2,11 @@
 
   <h2>Dashboard</h2>
 
-  <div class="description">
+  <div #description class="description">
+
+    <span class="hidden" (click)="description.remove()">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </span>
 
     <p>Hello user,
     <br>
@@ -10,6 +14,22 @@
     Welcome to Relevo. A complete software for hardware inventory
     management.
     </p>
+
+  </div>
+
+  <h3>Lab 509 Summary</h3>
+
+  <div class="display-wrap">
+
+    <div class="panel">
+      <span class="numbers">23</span>
+      <span class="sub-heading">Total PCs</span>
+    </div>
+
+    <div class="panel">
+      <span class="numbers">3</span>
+      <span class="sub-heading">Unsolved <br> Issues</span>
+    </div>
 
   </div>
 
@@ -33,5 +53,7 @@
     </div>
 
   </div>
+
+
 
 </div>
