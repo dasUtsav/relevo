@@ -8,12 +8,12 @@ Our project uses [npm](https://www.npmjs.com/) to handle all the modules and dep
 
 Steps to install and update node.js and npm is provided [here](https://docs.npmjs.com/getting-started/installing-node).
 
-After installing node and npm we can install angular/cli easily with the help of npm.
+After installing node and npm we can install **angular/cli** easily with the help of **npm**.
 Run the following command in the terminal.
 
 `npm install -g @angular/cli`
 
-This install angular/cli globally.
+This installs angular/cli globally.
 
 ## Installing the dependencies
 
