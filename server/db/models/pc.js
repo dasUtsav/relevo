@@ -22,6 +22,18 @@ var PcSchema = new mongoose.Schema({
         type: Object,
         default: {}
       }
+    }],
+    issues: [{
+      date: {
+        type: Date
+      },
+      title: {
+        type: String,
+        required: true
+      },
+      description: {
+        type: String
+      }
     }]
 
 

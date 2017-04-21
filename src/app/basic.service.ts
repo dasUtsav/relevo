@@ -54,7 +54,8 @@ export class BasicService {
                             date = new Date(resp.history[resp.history.length - 1].date).toDateString();
                             return{
                                 pcNo: resp.pcNo,
-                                date
+                                date,
+                                issues: resp.issues
                             }
                         });
                         console.log(response); 

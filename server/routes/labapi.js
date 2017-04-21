@@ -124,7 +124,29 @@ labapi.delete('/removefromhistory', (req, res)=>{
     }).catch((err)=>{
       res.status(400).send('Couldnt delete commit');
     })
-})
+});
+
+labapi.post('/addIssue', (req, res)=>{
+    console.log(req.body);
+    Pc.findOne({
+              labNo: req.body.labNo, 
+              pcNo: req.body.pcNo
+            }).then((pc)=>{
+              if(!pc){
+                return Promise.reject();
+              }
+              pc.issues.push({
+                date: new Date(),
+                title: req.body.title,
+                description: req.body.description
+              });
+              return pc.save();
+            }).then(()=>{
+              res.send('Issue saved successfully');
+            }).catch((err)=>{
+              res.status(400).send('could not find pc');
+            })
+});
 
 
 
