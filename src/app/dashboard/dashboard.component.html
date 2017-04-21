@@ -4,16 +4,19 @@
 
   <div #description class="description">
 
-    <span class="hidden" (click)="description.remove()">
-      <i class="fa fa-times" aria-hidden="true"></i>
-    </span>
+    <div class="des-Container">
+      <span class="hidden" (click)="description.remove()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </span>
 
-    <p>Hello user,
-    <br>
-    <br>
-    Welcome to Relevo. A complete software for hardware inventory
-    management.
-    </p>
+      <strong>Tooltip </strong><i class="fa fa-info-circle" aria-hidden="true"></i>
+
+      <br><br><p>
+      Welcome to Relevo. This dashboard will get you started on the current issues
+      in this lab. The organisation summary gives you a bird's eye view of the
+      entire inventory list.
+      </p>
+    </div>
 
   </div>
 
@@ -89,7 +92,7 @@
 
   <div class="calender">
     <h4>Lab change log</h4>
-    <h5>sfjdsjfsdkf sd kdfskf dsfl kdsflk sdklds k lsf dkl</h5>
+    <h5>A calender view of all the updates made in the lab.</h5>
     <angular2-fullcalendar [options]="calendarOptions"></angular2-fullcalendar>
   </div>
 

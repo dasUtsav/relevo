@@ -14,8 +14,8 @@ export class DashboardComponent implements OnInit {
   }
 
   calendarOptions:Object = {
-        height: 'parent',
-        fixedWeekCount : false,
+        height: 'auto',
+        fixedWeekCount : true,
         defaultDate: '2016-09-12',
         editable: true,
         eventLimit: true, // allow "more" link when too many events
