@@ -4,56 +4,96 @@
 
   <div #description class="description">
 
-    <span class="hidden" (click)="description.remove()">
-      <i class="fa fa-times" aria-hidden="true"></i>
-    </span>
+    <div class="des-Container">
+      <span class="hidden" (click)="description.remove()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </span>
 
-    <p>Hello user,
-    <br>
-    <br>
-    Welcome to Relevo. A complete software for hardware inventory
-    management.
-    </p>
+      <strong>Tooltip </strong><i class="fa fa-info-circle" aria-hidden="true"></i>
 
-  </div>
-
-  <h3>Lab 509 Summary</h3>
-
-  <div class="display-wrap">
-
-    <div class="panel">
-      <span class="numbers">23</span>
-      <span class="sub-heading">Total PCs</span>
-    </div>
-
-    <div class="panel">
-      <span class="numbers">3</span>
-      <span class="sub-heading">Unsolved <br> Issues</span>
+      <br><br><p>
+      Welcome to Relevo. This dashboard will get you started on the current issues
+      in this lab. The organisation summary gives you a bird's eye view of the
+      entire inventory list.
+      </p>
     </div>
 
   </div>
 
-  <h3>Organisation Summary</h3>
+  <div class="left">
 
-  <div class="display-wrap">
+    <h3>Lab 509 Summary</h3>
 
-    <div class="panel">
-      <span class="numbers">251</span>
-      <span class="sub-heading">Total Labs</span>
+    <div class="display-wrap">
+
+      <div class="panel">
+        <span class="numbers">23</span>
+        <span class="sub-heading">Total PCs</span>
+      </div>
+
+      <div class="panel2">
+
+        <div class="leftpanel">
+          <span class="numbers">3</span>
+          <span class="sub-heading">Unsolved <br> Issues</span>
+        </div>
+
+        <div class="rightpanel">
+          <h4>Recent Issues</h4>
+          <ul>
+            <li>
+              <a href="#">
+                <span class= "pcName">PC 509-10</span>
+                <span class = "issueDesc">Mouse not working</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class= "pcName">PC 509-03</span>
+                <span class = "issueDesc">Crack in Monitor</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class= "pcName">PC 509-01</span>
+                <span class = "issueDesc">Burnt Graphics card</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="panel">
-      <span class="numbers">2357</span>
-      <span class="sub-heading">Total PCs</span>
-    </div>
+    <h3>Organisation Summary</h3>
 
-    <div class="panel">
-      <span class="numbers">14</span>
-      <span class="sub-heading">Unsolved <br> Issues</span>
-    </div>
+    <div class="display-wrap">
 
+      <div class="panel">
+        <span class="numbers">251</span>
+        <span class="sub-heading">Total Labs</span>
+      </div>
+
+      <div class="panel">
+        <span class="numbers">2357</span>
+        <span class="sub-heading">Total PCs</span>
+      </div>
+
+      <div class="panel">
+        <span class="numbers">14</span>
+        <span class="sub-heading">Unsolved <br> Issues</span>
+      </div>
+
+    </div>
   </div>
 
-
+  <div class="calender">
+    <h4>Lab change log</h4>
+    <h5>A calender view of all the updates made in the lab.</h5>
+    <angular2-fullcalendar [options]="calendarOptions"></angular2-fullcalendar>
+  </div>
 
 </div>

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import {CalendarComponent} from "angular2-fullcalendar/src/calendar/calendar";
+
 
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -81,7 +83,8 @@ const appRoutes: Routes = [
     AllLabsComponent,
     Keys,
     DashboardComponent,
-    ViewDetailsComponent
+    ViewDetailsComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
