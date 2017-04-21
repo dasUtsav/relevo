@@ -86,6 +86,16 @@ labapi.get('/gethistory', (req, res)=>{
 });
 
 labapi.get('/getallpcs', (req, res)=>{
+    if(!req.query.labNo){
+      Pc.find().then((pcs)=>{
+      if(pcs.length === 0){
+        res.status(404).send();
+      }
+      res.send(pcs);
+    }).catch((err)=>{
+      res.status(404).send('could not find pcs for this particular lab');
+    });
+    }
     var labNo = req.query.labNo;
     Pc.find({labNo}).then((pcs)=>{
       if(pcs.length === 0){

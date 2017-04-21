@@ -22,45 +22,33 @@
 
   <div class="left">
 
-    <h3>Lab 509 Summary</h3>
+    <h3>Lab {{labNo}} Summary</h3>
 
     <div class="display-wrap">
 
       <div class="panel">
-        <span class="numbers">23</span>
+        <span class="numbers" *ngIf="pcs">{{pcs.length}}</span>
         <span class="sub-heading">Total PCs</span>
       </div>
 
       <div class="panel2">
 
         <div class="leftpanel">
-          <span class="numbers">3</span>
+          <span class="numbers" *ngIf="issuedPcs">{{issuedPcs.length}}</span>
           <span class="sub-heading">Unsolved <br> Issues</span>
         </div>
 
         <div class="rightpanel">
           <h4>Recent Issues</h4>
           <ul>
-            <li>
+            <li *ngFor="let issuedPc of limitedIssues">
               <a href="#">
-                <span class= "pcName">PC 509-10</span>
-                <span class = "issueDesc">Mouse not working</span>
+                <span class= "pcName">{{issuedPc.pcNo}}</span>
+                <span class = "issueDesc">{{issuedPc.title}}</span>
               </a>
             </li>
 
-            <li>
-              <a href="#">
-                <span class= "pcName">PC 509-03</span>
-                <span class = "issueDesc">Crack in Monitor</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <span class= "pcName">PC 509-01</span>
-                <span class = "issueDesc">Burnt Graphics card</span>
-              </a>
-            </li>
+            
           </ul>
         </div>
 
@@ -73,17 +61,17 @@
     <div class="display-wrap">
 
       <div class="panel">
-        <span class="numbers">251</span>
+        <span class="numbers">{{stats.noOfLabs}}</span>
         <span class="sub-heading">Total Labs</span>
       </div>
 
       <div class="panel">
-        <span class="numbers">2357</span>
+        <span class="numbers">{{stats.totalPcs}}</span>
         <span class="sub-heading">Total PCs</span>
       </div>
 
       <div class="panel">
-        <span class="numbers">14</span>
+        <span class="numbers">{{stats.totalIssues}}</span>
         <span class="sub-heading">Unsolved <br> Issues</span>
       </div>
 
