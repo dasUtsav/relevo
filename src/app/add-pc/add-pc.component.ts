@@ -15,16 +15,16 @@ import {BasicService} from '../basic.service';
   templateUrl: './add-pc.component.html',
   styleUrls: ['./add-pc.component.css']
 })
+
 export class AddPcComponent implements OnInit {
   labNo:Number = JSON.parse(localStorage.getItem('currentUser')).labNo;
-  pc:Pc = {labNo: this.labNo, pcNo: "", currentConfig: {peripherals:{}}};
+  pc:Pc = {labNo: this.labNo, pcNo: "", currentConfig: {peripherals:{keyboard:"",mouse:""}}};
   noOfPc:Number;
   constructor(private basicService:BasicService) {}
   addStuff:string;
   ngOnInit() {
     console.log(this.pc);
   }
-
 
   submit(){
       for(var i = 1; i <= this.noOfPc; i++){
@@ -46,13 +46,12 @@ export class AddPcComponent implements OnInit {
     console.log(this.pc);
   }
 
-
   deleteComponent(event){
     var prop = event.target.innerText;
     var temp = JSON.parse(JSON.stringify(this.pc));
     delete temp.currentConfig.peripherals[prop];
     this.pc = temp;
-    
+
   }
 
 }

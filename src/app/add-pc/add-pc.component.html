@@ -17,9 +17,6 @@
       <div class="form-group">
         <span>STEP 1 OF 3 :</span>
         <h3>PC Identification</h3>
-        <label for="name">Lab number</label>
-        <input type="number" class="form-control" name="labno"id="name" [(ngModel)]="pc.labNo" required>
-
         <label for="name">Number of PCs to be added</label>
         <input type="number" class="form-control"name="noofpcs" [(ngModel)]="noOfPc" required>
       </div>
@@ -40,9 +37,9 @@
         <h3>Peripeherals</h3>
         <div class="addField">
           <input type="search" name="addStuff" [(ngModel)]="addStuff" value="Keyboard">
-          <input type="submit" name="" value=" + Add" (click)="addPeripheral()">
+          <input type="submit" name="" value="Add" (click)="addPeripheral()">
         </div>
-        
+
         <div *ngFor="let peripheral of pc['currentConfig']['peripherals'] | keys">
           <label for="alterEgo" (click)="deleteComponent($event)">{{peripheral['key']}}</label>
           <input type="text" class="form-control" id="alterEgo" name="{{peripheral['key']}}" [(ngModel)]="pc.currentConfig.peripherals[peripheral['key']]">
@@ -50,6 +47,6 @@
 
         <button type="submit" class="btn btn-success" (click)="submit()">Submit</button>
       </div>
-      
+
     </form>
 </div>
