@@ -19,6 +19,7 @@ import { ViewPcComponent } from './view-pc/view-pc.component';
 import { AllLabsComponent } from './all-labs/all-labs.component';
 import { Keys } from './keys.pipe';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 const appRoutes: Routes = [
 
@@ -59,6 +60,10 @@ const appRoutes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+  },
+  {
+    path: 'view-pc',
+    component: ViewDetailsComponent,
   }
 
 ];
@@ -75,7 +80,8 @@ const appRoutes: Routes = [
     ViewPcComponent,
     AllLabsComponent,
     Keys,
-    DashboardComponent
+    DashboardComponent,
+    ViewDetailsComponent
   ],
   imports: [
     BrowserModule,
