@@ -11,8 +11,11 @@ export class SidenavComponent implements OnInit {
   labNo:Number;
   userName: string;
   constructor(private authService: AuthService, private router:Router) { 
-    this.labNo = JSON.parse(localStorage.getItem('currentUser')).labNo;
-    this.userName = JSON.parse(localStorage.getItem('currentUser')).name;
+    if(localStorage.getItem('currentUser')){
+      this.labNo = JSON.parse(localStorage.getItem('currentUser')).labNo;
+      this.userName = JSON.parse(localStorage.getItem('currentUser')).name;
+    }
+    
 
   }
 

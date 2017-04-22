@@ -78,6 +78,7 @@ export class DashboardComponent implements OnInit {
           }]
       }
   ngOnInit() {
+    var date, dateString;
     this.basicService.getPcs(this.labNo)
                      .subscribe((result)=>{
                         this.pcs = result;
@@ -94,15 +95,27 @@ export class DashboardComponent implements OnInit {
                             return 1;
                           return -1;
                         });
-                        var history = this.pcs.reduce((historied, pc)=>{
-                            pc['history'].forEach((hist)=>{
-                              historied.push({
-                                start: hist.date,
-                                title: pc.pcNo
-                              });
-                            });
+                        var history = this.pcs
+                                          .reduce((historied, pc)=>{
+                                            pc['history'].forEach((hist)=>{
+                                              date = new Date(hist.date);
+                                              dateString = date.toLocaleString();
+                                              
+                                              historied.push({
+                                                start: dateString,
+                                                date: date,
+                                                title: pc.pcNo
+                                              });
+                                              
+                                            });
                             return historied;
-                        }, []);
+                        }, []).sort((a, b)=>{
+                          if(a['date'] < b['date'])
+                            return 1;
+                          return -1;
+                        });
+                        console.log(history);
+                        
                         
                         
                         this.limitedIssues = this.issuedPcs.slice(0,3);
