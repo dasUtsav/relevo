@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BasicService} from '../basic.service';
 import {Pc} from "../Pc";
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-dashboard',
@@ -127,6 +128,7 @@ export class DashboardComponent implements OnInit {
       
       
   }
+  
 
   
         
